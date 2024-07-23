@@ -39,4 +39,5 @@ Depoya Gidin: cd ozripper
 ## Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakabilirsiniz.
 
-OzRipper 2023 senesinin 24nisanında çok sevdim bir kardeşimin vefatı nedeniyle ozanripper adı verilmistir. ## 24.04.∞
+## OzRipperin hikayesi
+OzRipper 2023 senesinin 24nisanında çok sevdim bir kardeşimin vefatı nedeniyle ozanripper adı verilmistir.  24.04.∞
