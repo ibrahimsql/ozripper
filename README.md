@@ -18,9 +18,9 @@ login:username=^USER^&password=^PASS^&submit=Login:F=Invalid username or passwor
 
 Hash Kırma: ./ozripper -h [hash] -t [hash_türü] -p [parola_listesi]
 
-Örnek Hash Kırma ./ozripper -h 5f4dcc3b5aa765d61d8327deb882cf99 -t md5 -p passwords.txt
+# Örnek Hash Kırma ./ozripper -h 5f4dcc3b5aa765d61d8327deb882cf99 -t md5 -p passwords.txt
 
-Parametreler
+ # Parametleler
 -l: Kullanıcı adı veya kullanıcı listesi yolu
 -p: Parola veya parola listesi yolu
 -h: Kırılacak hash değeri
