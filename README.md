@@ -30,7 +30,7 @@ http-get-form: HTTP GET form brute force saldırısı türü
 
 Kurulum
 
-GitHub deposunu klonlayın: git clone https://github.com/kullanici_adi/ozripper.git
+GitHub deposunu klonlayın: git clone [https://github.com/kullanici_adi/ozripper.git]
 
 Depoya Gidin: cd ozripper
 
