@@ -16,9 +16,9 @@ OzRipper, güçlü ve kapsamlı bir brute force aracı ve hash kırıcıdır. HT
 Örnek Kulanım: ./ozripper 192.168.1.1 -l users.txt -p passwords.txt http-get-form "/
 login:username=^USER^&password=^PASS^&submit=Login:F=Invalid username or password"
 
-Hash Kırma: ./ozripper -h [hash] -t [hash_türü] -p [parola_listesi]
+# Hash Kırma: ./ozripper -h [hash] -t [hash_türü] -p [parola_listesi]
 
-# Örnek Hash Kırma ./ozripper -h 5f4dcc3b5aa765d61d8327deb882cf99 -t md5 -p passwords.txt
+### Örnek Hash Kırma ./ozripper -h 5f4dcc3b5aa765d61d8327deb882cf99 -t md5 -p passwords.txt
 
  # Parametleler
 -l: Kullanıcı adı veya kullanıcı listesi yolu
@@ -34,9 +34,9 @@ GitHub deposunu klonlayın: git clone https://github.com/kullanici_adi/ozripper.
 
 Depoya Gidin: cd ozripper
 
-Derleyin: make
+## Derleyin: make
 
-Lisans
+## Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakabilirsiniz.
 
-OzRipper 2023 senesinin 24nisanında çok sevdim bir kardeşimin vefatı nedeniyle ozanripper adı verilmistir.
+OzRipper 2023 senesinin 24nisanında çok sevdim bir kardeşimin vefatı nedeniyle ozanripper adı verilmistir. ## 24.04.∞
