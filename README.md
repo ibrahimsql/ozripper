@@ -43,15 +43,14 @@ Ozripper, MD5, SHA1 ve SHA256 hash değerlerini kırmak ve HTTP GET veya POST fo
 
 ### HTTP Form Brute Force
 
-**Temel Kullanım:**
 ```sh
 ozripper <target_ip> -l <username_list.txt> -p <password_list.txt> http-get-form "<form_path>:<form_fields>:F=<error_message>" [-v] [-m <method>] [-f <form_fields>] [-o <otp_form>] [-t <thread_count>]
 
-### HTTP GET Form
-## Temel Kullanım:
+## HTTP GET Form
+ Temel Kullanım:
 ozripper <target_ip> -l <username_list.txt> -p <password_list.txt> http-get-form "<form_path>:<form_fields>:F=<error_message>" [-v]
-**Örnek Kullanım:**
+Örnek Kullanım:
 ozripper 192.168.1.1 -l users.txt -p passwords.txt http-get-form "/login.php:username=&password=:F=Invalid login" -v
-## HTTP POST Form
+ HTTP POST Form
 
 
