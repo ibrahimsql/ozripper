@@ -1,0 +1,172 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <getopt.h>
+
+// Kullanım talimatlarını yazdır
+void print_usage() {
+    printf("Kullanım: hashcrack [seçenekler]\n");
+    printf("Seçenekler:\n");
+    printf("  --wordlist=<dosya>          Sözlük dosyasını belirtir\n");
+    printf("  --rules-file=<dosya>        Kural dosyasını belirtir\n");
+    printf("  --incremental              Artan uzunlukta brute force saldırısı\n");
+    printf("  --markov                   Markov zinciri saldırısı\n");
+    printf("  --hybrid                   Hibrit saldırı (GPU hızlandırma)\n");
+    printf("  --case-sensitive           Büyük/küçük harfe duyarlı\n");
+    printf("  --ignore-case              Büyük/küçük harfe duyarsız\n");
+    printf("  --charset=<karakter-seti>  Kullanılacak karakter setini belirtir\n");
+    printf("  --sandbox                  Sandbox modunda çalıştırma\n");
+    printf("  --secure-wipe              Güvenli veri silme\n");
+    printf("  --benchmark                Performans testini başlatma\n");
+    printf("  --save-session             Oturum kaydetme\n");
+    printf("  --restore-session          Oturum geri yükleme\n");
+    printf("  --mask=<maske>             Maske belirleme\n");
+    printf("  --rate-limit=<limit>       Oran sınırlaması belirleme\n");
+    printf("  --alert=<deneme-sayısı>    Belirtilen deneme sayısından sonra bildirim gönderme\n");
+    printf("  --email-notification=<email> E-posta ile bildirim gönderme\n");
+    printf("  --sms-notification=<telefon> SMS ile bildirim gönderme\n");
+    printf("  --auto-ban=<deneme-sayısı> Otomatik banlama (belirtilen deneme sayısından sonra)\n");
+    printf("  --session-timeout=<saniye> Oturum zaman aşımı süresi\n");
+    printf("  --auto-save                Otomatik kaydetme\n");
+    printf("  --backup=<dosya>           Yedekleme dosyasını belirtir\n");
+    printf("  --restore=<dosya>          Yedekten geri yükleme\n");
+    printf("  --silent                   Sessiz mod\n");
+    printf("  --debug                    Hata ayıklama modunu etkinleştir\n");
+    printf("  --dry-run                  Gerçek işlem yapmadan simülasyon\n");
+    printf("  --log-failed-attempts      Başarısız girişleri kaydetme\n");
+}
+
+int main(int argc, char *argv[]) {
+    int option_index = 0;
+    static struct option long_options[] = {
+        {"wordlist", required_argument, 0, 'w'},
+        {"rules-file", required_argument, 0, 'r'},
+        {"incremental", no_argument, 0, 'i'},
+        {"markov", no_argument, 0, 'm'},
+        {"hybrid", no_argument, 0, 'h'},
+        {"case-sensitive", no_argument, 0, 'c'},
+        {"ignore-case", no_argument, 0, 'g'},
+        {"charset", required_argument, 0, 's'},
+        {"sandbox", no_argument, 0, 'b'},
+        {"secure-wipe", no_argument, 0, 'u'},
+        {"benchmark", no_argument, 0, 'e'},
+        {"save-session", no_argument, 0, 'a'},
+        {"restore-session", no_argument, 0, 'f'},
+        {"mask", required_argument, 0, 'k'},
+        {"rate-limit", required_argument, 0, 'l'},
+        {"alert", required_argument, 0, 't'},
+        {"email-notification", required_argument, 0, 'n'},
+        {"sms-notification", required_argument, 0, 'x'},
+        {"auto-ban", required_argument, 0, 'o'},
+        {"session-timeout", required_argument, 0, 'j'},
+        {"auto-save", no_argument, 0, 'z'},
+        {"backup", required_argument, 0, 'p'},
+        {"restore", required_argument, 0, 'd'},
+        {"silent", no_argument, 0, 'v'},
+        {"debug", no_argument, 0, 'g'},
+        {"dry-run", no_argument, 0, 'y'},
+        {"log-failed-attempts", no_argument, 0, 'q'},
+        {0, 0, 0, 0}
+    };
+
+    int c;
+    while (1) {
+        int option_index = 0;
+        c = getopt_long(argc, argv, "", long_options, &option_index);
+
+        if (c == -1)
+            break;
+
+        switch (c) {
+            case 'w':
+                printf("Sözlük dosyası: %s\n", optarg);
+                break;
+            case 'r':
+                printf("Kural dosyası: %s\n", optarg);
+                break;
+            case 's':
+                printf("Karakter seti: %s\n", optarg);
+                break;
+            case 'k':
+                printf("Maske: %s\n", optarg);
+                break;
+            case 'l':
+                printf("Oran sınırlaması: %s\n", optarg);
+                break;
+            case 't':
+                printf("Bildirim deneme sayısı: %s\n", optarg);
+                break;
+            case 'n':
+                printf("E-posta ile bildirim: %s\n", optarg);
+                break;
+            case 'x':
+                printf("SMS ile bildirim: %s\n", optarg);
+                break;
+            case 'o':
+                printf("Otomatik banlama deneme sayısı: %s\n", optarg);
+                break;
+            case 'j':
+                printf("Oturum zaman aşımı süresi: %s saniye\n", optarg);
+                break;
+            case 'p':
+                printf("Yedekleme dosyası: %s\n", optarg);
+                break;
+            case 'd':
+                printf("Yedekten geri yükleme: %s\n", optarg);
+                break;
+            case 'i':
+                printf("Artan uzunlukta brute force saldırısı\n");
+                break;
+            case 'm':
+                printf("Markov zinciri saldırısı\n");
+                break;
+            case 'h':
+                printf("Hibrit saldırı\n");
+                break;
+            case 'c':
+                printf("Büyük/küçük harfe duyarlı\n");
+                break;
+            case 'g':
+                printf("Büyük/küçük harfe duyarsız\n");
+                break;
+            case 'b':
+                printf("Sandbox modunda çalıştırma\n");
+                break;
+            case 'u':
+                printf("Güvenli veri silme\n");
+                break;
+            case 'e':
+                printf("Performans testi başlatma\n");
+                break;
+            case 'a':
+                printf("Oturumu kaydetme\n");
+                break;
+            case 'f':
+                printf("Oturumu geri yükleme\n");
+                break;
+            case 'z':
+                printf("Otomatik kaydetme etkin\n");
+                break;
+            case 'v':
+                printf("Sessiz mod\n");
+                break;
+            case 'y':
+                printf("Simülasyon (gerçek işlem yapmadan)\n");
+                break;
+            case 'q':
+                printf("Başarısız girişleri kaydetme\n");
+                break;
+            case '?':
+                print_usage();
+                exit(EXIT_FAILURE);
+        }
+    }
+
+    if (optind < argc) {
+        fprintf(stderr, "Geçersiz argümanlar:\n");
+        while (optind < argc) {
+            fprintf(stderr, "  %s\n", argv[optind++]);
+        }
+    }
+
+    return 0;
+}
