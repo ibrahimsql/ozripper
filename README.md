@@ -121,15 +121,15 @@ ozripper <hedef_ip> -l <kullanıcı_listesi> -p <parola_listesi> <saldırı_tür
 
 
 ### 🌐 Genel Seçenekler
--t <hedef_ip>: Hedef IP adresi. 🌍
--u <kullanici_listesi>: Kullanıcı adı listesi dosyası. 👤
--p <parola_listesi>: Şifre listesi dosyası. 🔑
--e <hata_mesaji>: Hata mesajı. ❌
--H <hash>: Kırılacak hash değeri. 🔒
--v: Ayrıntılı çıktı. 📜
--m <metod>: HTTP metodu (GET veya POST). 🌐
--f <form_bilgileri>: Form bilgileri. 📝
-📂 Dosya ve Çıktı Ayarları
+`-t <hedef_ip>`: Hedef IP adresi. 🌍
+`-u <kullanici_listesi>`: Kullanıcı adı listesi dosyası. 👤
+`-p <parola_listesi>`: Şifre listesi dosyası. 🔑
+`-e <hata_mesaji>`: Hata mesajı. ❌
+`-H <hash>`: Kırılacak hash değeri. 🔒
+`-v: Ayrıntılı çıktı`. 📜
+`-m <metod>`: HTTP metodu (GET veya POST). 🌐
+`-f <form_bilgileri>`: Form bilgileri. 📝
+### 📂 Dosya ve Çıktı Ayarları
 --input-file <dosya>: Girdi dosyası. 📥
 --output-file <dosya>: Çıktı dosyası. 📤
 --output-format <format>: Çıktı formatı. 🖋️
