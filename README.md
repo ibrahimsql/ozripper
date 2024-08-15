@@ -120,108 +120,103 @@ ozripper -h e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 -p 
 ozripper <hedef_ip> -l <kullanıcı_listesi> -p <parola_listesi> <saldırı_türü> "[sayfa_yolu]:[form_alanları]:F=[hata_mesajı]" [-v] [-h -t <hash_türü>] [-m] [-f <form_alanları>] [-o <otp_form>] [-t <iş_parçacığı_sayısı>]
 
 
-#### Parametreler ve Açıklamaları
-
-#### komut Satırı Seçenekleri
-**Genel Seçenekler**
-`-t <hedef_ip>: Hedef IP adresi.
-`-u <kullanici_listesi>: Kullanıcı adı listesi dosyası.
-`-p <parola_listesi>: Şifre listesi dosyası.
-`-e <hata_mesaji>: Hata mesajı.
-`-H <hash>: Kırılacak hash değeri.
-`-v: Ayrıntılı çıktı.
-`-m <metod>: HTTP metodu (GET veya POST).
-`-f <form_bilgileri>: Form bilgileri.
-
-#### Dosya ve Çıktı Ayarları
-`--input-file <dosya>: Girdi dosyası.
-`--output-file <dosya>: Çıktı dosyası.
-`--output-format <format>: Çıktı formatı.
-`--single-hash: Tek hash modu.
-`--batch-mode: Toplu işlem modu.
-`--interactive-mode: Etkileşimli mod.
-`--silent-mode: Sessiz mod.
-`--verbose-mode: Ayrıntılı mod.
-`--progress-bar: İlerleme çubuğu.
-**Kaba Kuvvet ve Sözlük**
---brute-force: Kaba kuvvet modu.
---dictionary <dosya>: Sözlük dosyası.
---wordlist <dosya>: Kelime listesi.
---min-length <uzunluk>: Minimum kelime uzunluğu.
---max-length <uzunluk>: Maksimum kelime uzunluğu.
---charset <karakter_seti>: Karakter seti.
---incremental: Artan mod.
---mask <maske>: Maske.
---attack-mode <mod>: Saldırı modu.
---threads <sayi>: İş parçacığı sayısı.
---gpu: GPU kullanımı.
-**Bellek ve Performans**
---priority <öncelik>: Öncelik.
---memory-limit <limit>: Bellek limiti.
---skip-errors: Hataları atla.
---retry <deneme_sayısı>: Tekrar deneme sayısı.
---rules <kurallar>: Kurallar.
---exclude-chars <karakterler>: Hariç tutulan karakterler.
---include-chars <karakterler>: Dahil edilen karakterler.
---min-numbers <rakam_sayısı>: Minimum rakam sayısı.
---min-uppercase <büyük_harf_sayısı>: Minimum büyük harf sayısı.
---min-lowercase <küçük_harf_sayısı>: Minimum küçük harf sayısı.
---max-non-alpha <karakter_sayısı>: Maksimum alfanümerik olmayan karakter sayısı.
-**Çıktı ve Günlükleme**
---dry-run: Kuru çalıştırma.
---test-mode: Test modu.
---log-file <dosya>: Log dosyası.
---log-level <seviye>: Log seviyesi.
---save-session: Oturumu kaydet.
---session-timeout <saniye>: Oturum zaman aşımı.
---auto-pause: Otomatik duraklatma.
---max-attempts <sayı>: Maksimum deneme sayısı.
---notify-on-completion: Tamamlandığında bildirim.
---auto-save: Otomatik kaydetme.
-**Güvenlik ve Yedekleme**
---ban-ip <ip_adresi>: Engellenmiş IP adresi.
---whitelist-ip <ip_adresi>: Beyaz listeye alınmış IP adresi.
---encrypt-output: Çıktıyı şifrele.
---password-protect: Şifre koruması.
---anonymize: Anonimleştirme.
---secure-delete: Güvenli silme.
---auto-backup: Otomatik yedekleme.
---backup-file <dosya>: Yedek dosyası.
---restore-session <dosya>: Oturumu geri yükle.
-**Bildirim ve Proxy**
---sms-notification: SMS bildirimi.
---email-notification: E-posta bildirimi.
---proxy-address <adres>: Proxy adresi.
---proxy-chains <zincir>: Proxy zincirleri.
---timeout-value <saniye>: Zaman aşımı değeri.
---max-memory <mb>: Maksimum bellek kullanımı.
---notify-on-error: Hata durumunda bildirim.
---error-log <dosya>: Hata logu.
---session-file <dosya>: Oturum dosyası.
---enable-logging: Loglamayı etkinleştir.
---log-format <format>: Log formatı.
---dns-lookup: DNS sorgusu.
---use-ssl: SSL kullanımı.
---http-proxy <adres>: HTTP proxy.
---socks-proxy <adres>: SOCKS proxy.
---no-proxy <adres>: Proxy kullanılmayacak adresler.
---proxy-rotation: Proxy döngüsü.
---dynamic-charset <karakter_seti>: Dinamik karakter seti.
---rate-limit <limit>: Hız sınırlaması.
---input-format <format>: Girdi formatı.
---output-options <seçenekler>: Çıktı seçenekleri.
---max-retries <sayı>: Maksimum tekrar sayısı.
---custom-rules <kurallar>: Özel kurallar.
---hash-length <uzunluk>: Hash uzunluğu.
---session-restore-interval <saniye>: Oturum geri yükleme aralığı.
---debug-mode: Hata ayıklama modu.
---show-stats: İstatistikleri göster.
---enable-tuning: Ayarları etkinleştir.
---tuning-options <seçenekler>: Ayar seçenekleri.
---enable-failure-retry: Hata durumunda tekrar denemeyi etkinleştir.
---failure-retry-options <seçenekler>: Hata tekrar deneme seçenekleri.
---custom-logging <seçenekler>: Özel loglama.
-
+### 🌐 Genel Seçenekler
+-t <hedef_ip>: Hedef IP adresi. 🌍
+-u <kullanici_listesi>: Kullanıcı adı listesi dosyası. 👤
+-p <parola_listesi>: Şifre listesi dosyası. 🔑
+-e <hata_mesaji>: Hata mesajı. ❌
+-H <hash>: Kırılacak hash değeri. 🔒
+-v: Ayrıntılı çıktı. 📜
+-m <metod>: HTTP metodu (GET veya POST). 🌐
+-f <form_bilgileri>: Form bilgileri. 📝
+📂 Dosya ve Çıktı Ayarları
+--input-file <dosya>: Girdi dosyası. 📥
+--output-file <dosya>: Çıktı dosyası. 📤
+--output-format <format>: Çıktı formatı. 🖋️
+--single-hash: Tek hash modu. 🔢
+--batch-mode: Toplu işlem modu. 🔄
+--interactive-mode: Etkileşimli mod. 💬
+--silent-mode: Sessiz mod. 🤫
+--verbose-mode: Ayrıntılı mod. 📊
+--progress-bar: İlerleme çubuğu. 📊
+### 🔍 Kaba Kuvvet ve Sözlük
+--brute-force: Kaba kuvvet modu. 💪
+--dictionary <dosya>: Sözlük dosyası. 📚
+--wordlist <dosya>: Kelime listesi. 📋
+--min-length <uzunluk>: Minimum kelime uzunluğu. 📏
+--max-length <uzunluk>: Maksimum kelime uzunluğu. 📏
+--charset <karakter_seti>: Karakter seti. 🔡
+--incremental: Artan mod. 📈
+--mask <mask>: Maske. 🎭
+--attack-mode <mod>: Saldırı modu. ⚔️
+--threads <sayı>: İş parçacığı sayısı. 🧵
+--gpu: GPU kullanımı. 🖥️
+### 🧠 Bellek ve Performans
+--priority <öncelik>: Öncelik. ⚖️
+--memory-limit <limit>: Bellek limiti. 🧠
+--skip-errors: Hataları atla. 🚫
+--retry <deneme_sayısı>: Tekrar deneme sayısı. 🔄
+--rules <kurallar>: Kurallar. 📜
+--exclude-chars <karakterler>: Hariç tutulan karakterler. 🚫
+--include-chars <karakterler>: Dahil edilen karakterler. ✅
+--min-numbers <rakam_sayısı>: Minimum rakam sayısı. 🔢
+--min-uppercase <büyük_harf_sayısı>: Minimum büyük harf sayısı. 🔠
+--min-lowercase <küçük_harf_sayısı>: Minimum küçük harf sayısı. 🔡
+--max-non-alpha <karakter_sayısı>: Maksimum alfanümerik olmayan karakter sayısı. 🔡
+### 📊 Çıktı ve Günlükleme
+--dry-run: Kuru çalıştırma. 🌱
+--test-mode: Test modu. 🧪
+--log-file <dosya>: Log dosyası. 🗂️
+--log-level <seviye>: Log seviyesi. 📈
+--save-session: Oturumu kaydet. 💾
+--session-timeout <süre>: Oturum zaman aşımı. ⏲️
+--auto-pause: Otomatik duraklatma. ⏸️
+--max-attempts <sayı>: Maksimum deneme sayısı. 🔢
+--notify-on-completion: Tamamlandığında bildirim. 📩
+--auto-save: Otomatik kaydetme. 💾
+🔒 Güvenlik ve Yedekleme
+--ban-ip <ip_adresi>: Engellenmiş IP adresi. 🚫
+--whitelist-ip <ip_adresi>: Beyaz listeye alınmış IP adresi. ✅
+--encrypt-output: Çıktıyı şifrele. 🔐
+--password-protect: Şifre koruması. 🔒
+--anonymize: Anonimleştirme. 🕵️‍♂️
+--secure-delete: Güvenli silme. 🗑️
+--auto-backup: Otomatik yedekleme. 💾
+--backup-file <dosya>: Yedek dosyası. 🗂️
+--restore-session <dosya>: Oturumu geri yükle. 🔄
+### 📬 Bildirim ve Proxy
+--sms-notification <telefon_numarası>: SMS bildirimi. 📱
+--email-notification <e-posta>: E-posta bildirimi. 📧
+--proxy-address <adres>: Proxy adresi. 🌐
+--proxy-chains <zincirler>: Proxy zincirleri. 🔗
+--timeout-value <süre>: Zaman aşımı değeri. ⏳
+--max-memory <limit>: Maksimum bellek kullanımı. 🧠
+--notify-on-error: Hata durumunda bildirim. 🚨
+--error-log <dosya>: Hata logu. 🗂️
+--session-file <dosya>: Oturum dosyası. 💾
+--enable-logging: Loglamayı etkinleştir. 📜
+--log-format <format>: Log formatı. 📋
+--dns-lookup <domain>: DNS sorgusu. 🌐
+--use-ssl: SSL kullanımı. 🔐
+--http-proxy <adres>: HTTP proxy. 🌐
+--socks-proxy <adres>: SOCKS proxy. 🌐
+--no-proxy <adresler>: Proxy kullanılmayacak adresler. 🚫
+--proxy-rotation: Proxy döngüsü. 🔄
+--dynamic-charset <karakter_seti>: Dinamik karakter seti. 🔡
+--rate-limit <limit>: Hız sınırlaması. 🕒
+--input-format <format>: Girdi formatı. 📥
+--output-options <seçenekler>: Çıktı seçenekleri. 📤
+--max-retries <sayı>: Maksimum tekrar sayısı. 🔁
+--custom-rules <kurallar>: Özel kurallar. 📜
+--hash-length <uzunluk>: Hash uzunluğu. 🔢
+--session-restore-interval <süre>: Oturum geri yükleme aralığı. ⏲️
+--debug-mode: Hata ayıklama modu. 🐞
+--show-stats: İstatistikleri göster. 📊
+--enable-tuning: Ayarları etkinleştir. ⚙️
+--tuning-options <seçenekler>: Ayar seçenekleri. ⚙️
+--enable-failure-retry: Hata durumunda tekrar denemeyi etkinleştir. 🔄
+--failure-retry-options <seçenekler>: Hata tekrar deneme seçenekleri. ⚙️
+--custom-logging <seçenekler>: Özel loglama. 📝
 
 ### 🛠️ Kurulum
 
