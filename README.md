@@ -241,6 +241,6 @@ Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için LISANS
 Proje ile ilgili sorularınız için [ib433503@gmail.com](mailto:ib433503@gmail.com) adresine ulaşabilirsiniz.
 
 ## 🏆 OzRipper’in Hikayesi
-OzRipper, adını, çok sevdiğim kardeşim Ozan’ın anısından alır. Ozan, 24 Nisan 2023 tarihinde vefat etti ve bu kaybın ardından onun anısını yaşatmak için bu projeyi başlattım. Projemizin adı, Ozan’ın mirasını yaşatmak ve onun hatırasına saygı göstermek amacıyla bu yazılımın her bir parçasında yaşatılmaktadır.
+Oz/Ozn,Aletleri adını, çok sevdiğim kardeşim Ozan’ın anısından alır. Ozan, 24 Nisan 2023 tarihinde vefat etti ve bu kaybın ardından onun anısını yaşatmak için bu projeyi başlattım. Projemizin adı, Ozan’ın mirasını yaşatmak ve onun hatırasına saygı göstermek amacıyla bu yazılımın her bir parçasında yaşatılmaktadır.
 OzRipper, güçlü bir hash kırma aracı olarak teknik dünyada iz bırakmakla kalmayıp, aynı zamanda Ozan’ın azmi ve ilham verici kişiliğini de anmak için tasarlandı. Her bir satır kodda, onun hatırasına olan bağlılığımızı ve yaşamış olduğu özveriyi yansıtmayı umuyoruz.
 Bu proje, sadece bir yazılım aracı değil, aynı zamanda kaybettiğimiz değerli bir insanın anısını onurlandırma çabamızın bir sembolüdür. Kalbimizdesin, Ozan kardeşim. 24.04.∞
