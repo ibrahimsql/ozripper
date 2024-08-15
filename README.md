@@ -121,28 +121,29 @@ ozripper <hedef_ip> -l <kullanıcı_listesi> -p <parola_listesi> <saldırı_tür
 
 
 #### Parametreler ve Açıklamaları
-Komut Satırı Seçenekleri
-Genel Seçenekler
--t <hedef_ip>: Hedef IP adresi.
--u <kullanici_listesi>: Kullanıcı adı listesi dosyası.
--p <parola_listesi>: Şifre listesi dosyası.
--e <hata_mesaji>: Hata mesajı.
--H <hash>: Kırılacak hash değeri.
--v: Ayrıntılı çıktı.
--m <metod>: HTTP metodu (GET veya POST).
--f <form_bilgileri>: Form bilgileri.
-Dosya ve Çıktı Ayarları
---input-file <dosya>: Girdi dosyası.
---output-file <dosya>: Çıktı dosyası.
---output-format <format>: Çıktı formatı.
-Modlar
---single-hash: Tek hash modu.
---batch-mode: Toplu işlem modu.
---interactive-mode: Etkileşimli mod.
---silent-mode: Sessiz mod.
---verbose-mode: Ayrıntılı mod.
---progress-bar: İlerleme çubuğu.
-Kaba Kuvvet ve Sözlük
+
+#### komut Satırı Seçenekleri
+**Genel Seçenekler**
+`-t <hedef_ip>: Hedef IP adresi.
+`-u <kullanici_listesi>: Kullanıcı adı listesi dosyası.
+`-p <parola_listesi>: Şifre listesi dosyası.
+`-e <hata_mesaji>: Hata mesajı.
+`-H <hash>: Kırılacak hash değeri.
+`-v: Ayrıntılı çıktı.
+`-m <metod>: HTTP metodu (GET veya POST).
+`-f <form_bilgileri>: Form bilgileri.
+
+#### Dosya ve Çıktı Ayarları
+`--input-file <dosya>: Girdi dosyası.
+`--output-file <dosya>: Çıktı dosyası.
+`--output-format <format>: Çıktı formatı.
+`--single-hash: Tek hash modu.
+`--batch-mode: Toplu işlem modu.
+`--interactive-mode: Etkileşimli mod.
+`--silent-mode: Sessiz mod.
+`--verbose-mode: Ayrıntılı mod.
+`--progress-bar: İlerleme çubuğu.
+**Kaba Kuvvet ve Sözlük**
 --brute-force: Kaba kuvvet modu.
 --dictionary <dosya>: Sözlük dosyası.
 --wordlist <dosya>: Kelime listesi.
@@ -154,7 +155,7 @@ Kaba Kuvvet ve Sözlük
 --attack-mode <mod>: Saldırı modu.
 --threads <sayi>: İş parçacığı sayısı.
 --gpu: GPU kullanımı.
-Bellek ve Performans
+**Bellek ve Performans**
 --priority <öncelik>: Öncelik.
 --memory-limit <limit>: Bellek limiti.
 --skip-errors: Hataları atla.
@@ -166,7 +167,7 @@ Bellek ve Performans
 --min-uppercase <büyük_harf_sayısı>: Minimum büyük harf sayısı.
 --min-lowercase <küçük_harf_sayısı>: Minimum küçük harf sayısı.
 --max-non-alpha <karakter_sayısı>: Maksimum alfanümerik olmayan karakter sayısı.
-Çıktı ve Günlükleme
+**Çıktı ve Günlükleme**
 --dry-run: Kuru çalıştırma.
 --test-mode: Test modu.
 --log-file <dosya>: Log dosyası.
@@ -177,7 +178,7 @@ Bellek ve Performans
 --max-attempts <sayı>: Maksimum deneme sayısı.
 --notify-on-completion: Tamamlandığında bildirim.
 --auto-save: Otomatik kaydetme.
-Güvenlik ve Yedekleme
+**Güvenlik ve Yedekleme**
 --ban-ip <ip_adresi>: Engellenmiş IP adresi.
 --whitelist-ip <ip_adresi>: Beyaz listeye alınmış IP adresi.
 --encrypt-output: Çıktıyı şifrele.
@@ -187,7 +188,7 @@ Güvenlik ve Yedekleme
 --auto-backup: Otomatik yedekleme.
 --backup-file <dosya>: Yedek dosyası.
 --restore-session <dosya>: Oturumu geri yükle.
-Bildirim ve Proxy
+**Bildirim ve Proxy**
 --sms-notification: SMS bildirimi.
 --email-notification: E-posta bildirimi.
 --proxy-address <adres>: Proxy adresi.
