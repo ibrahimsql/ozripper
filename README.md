@@ -238,7 +238,7 @@ Katkılar her zaman memnuniyetle karşılanır! Herhangi bir değişiklik yapmak
 Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için LISANS dosyasına bakın.
 
 ## 📬 İletişim
-Proje ile ilgili sorularınız için [ib433503@gmail.com](mailto:ib433503@gmail.com) adresine ulaşabilirsiniz.
+Proje ile ilgili sorularınız için [ibrahimsql](mailto:ibrahimsql@proton.me) adresine ulaşabilirsiniz.
 
 ## 🏆 OzRipper’in Hikayesi
 Oz/Ozn,Aletleri adını, çok sevdiğim kardeşim Ozan’ın anısından alır. Ozan, 24 Nisan 2023 tarihinde vefat etti ve bu kaybın ardından onun anısını yaşatmak için bu projeyi başlattım. Projemizin adı, Ozan’ın mirasını yaşatmak ve onun hatırasına saygı göstermek amacıyla bu yazılımın her bir parçasında yaşatılmaktadır.
